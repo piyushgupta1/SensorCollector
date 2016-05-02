@@ -128,20 +128,18 @@ public class Meter implements UsbSerialInterface.UsbReadCallback {
     }
 
     public String get_name_of_stream(int index) {
-        StringBuilder s = new StringBuilder();
-        s.append("/");
-        s.append(_id);
-        s.append("/");
-        s.append(params[index]);
-        return s.toString();
+        return "/" +
+                "android_1" +
+                "/" +
+                _id +
+                "/" +
+                params[index];
     }
 
     public String get_init_string() {
-        StringBuilder stringBuilder= new StringBuilder();
-        stringBuilder.append("/operation:").append(operation).append("HoldingRegister");
-        stringBuilder.append("/id:").append(2);
-        stringBuilder.append("/m_startAddress:").append(base_address);
-        stringBuilder.append("/m_length:").append(no_of_register);
-        return stringBuilder.toString();
+        return "/operation:" + operation + "HoldingRegister" +
+                "/id:" + 2 +
+                "/m_startAddress:" + base_address +
+                "/m_length:" + no_of_register;
     }
 }

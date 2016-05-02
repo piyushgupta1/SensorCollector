@@ -23,7 +23,6 @@ import java.util.UUID;
  * An {@link IntentService} subclass for handling asynchronous task requests in
  * a service on a separate handler thread.
  * <p/>
- * TODO: Customize class - update intent actions, extra parameters and static
  * helper methods.
  */
 public class DataPublish extends IntentService {
@@ -80,9 +79,6 @@ public class DataPublish extends IntentService {
         try {
             data.clear();
             data.addAll(Common.database.getAllRecordsSensorData(Common.send_at_once));
-//            if(data.size()==0){
-//                throw new NullPointerException("NO data to send currently");
-//            }
             main_data_json = new JSONObject();
             HashMap<String, JSONArray> arry = new HashMap<>();
             for (int i = 0; i < data.size(); i++) {

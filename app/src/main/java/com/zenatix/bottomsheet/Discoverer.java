@@ -25,7 +25,6 @@ public class Discoverer extends Thread {
     private static final int DISCOVERY_PORT = 1233;
     private static final int TIMEOUT_MS = 500;
 
-    // TODO: Vary the challenge, or it's not much of a challenge :)
     private static final String mChallenge = "myvoice";
     private WifiManager mWifi;
 

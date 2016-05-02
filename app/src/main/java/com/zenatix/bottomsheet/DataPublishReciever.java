@@ -11,7 +11,6 @@ public class DataPublishReciever extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        // TODO: This method is called when the BroadcastReceiver is receiving
         // an Intent broadcast.
         Log.i("DataPublishReciever","onReceive : I AM HERE");
         context.startService(new Intent(context, DataPublish.class));

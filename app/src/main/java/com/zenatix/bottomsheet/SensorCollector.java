@@ -349,7 +349,7 @@ public class SensorCollector
         List<Sensor> sensors = new ArrayList<Sensor>();
         sensors.addAll(sensorManager.getSensorList(Sensor.TYPE_GYROSCOPE));
         sensors.addAll(sensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER));
-        sensors.addAll(sensorManager.getSensorList(Sensor.TYPE_MAGNETIC_FIELD));
+//        sensors.addAll(sensorManager.getSensorList(Sensor.TYPE_MAGNETIC_FIELD));
 //        sensors.addAll(sensorManager.getSensorList(Sensor.TYPE_ORIENTATION));
         // Fudge factor to get this to compile under Froyo, while
         // still allowing for us to take advantage of Gingerbread.
